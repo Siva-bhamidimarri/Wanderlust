@@ -1,0 +1,161 @@
+body{
+    font-family: "Plus Jakarta Sans",sans-serif !important;
+    display: flex; /* to make footer stick bottom we occupy whole body 100vh */
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1; /* footer sticks bottom */
+}
+/* NavBar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color:blueviolet;
+    font-size: 2rem;
+}
+.navbar-nav .nav-link{
+    color:#222222 !important;
+    opacity: 1 !important;
+    font-weight: 500;
+}
+/*Footer*/
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+   margin-right: 1rem; 
+   font-size: 1.2rem;
+}
+.f-info{
+    text-align: center;
+    display:flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+}
+/* fixed footer so it's always visible full width */
+footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+/* prevent page content from being hidden behind fixed footer */
+body{ padding-bottom: 8.5rem; }
+
+/* keep header from overlapping content when sticky */
+body > .container{
+    padding-top: 0.5rem;
+}
+/* cards */
+.listing-card{
+    border:none !important;
+    margin-bottom:1.5rem;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 1px 6px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.listing-card:hover{
+    transform: translateY(-3px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+.search-results{
+    max-width:440px;
+    margin:1.5rem auto;
+}
+.listing-result-item{
+    width:100%;
+}
+.search-result-card{
+    width:100%;
+    max-width:460px;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 1px 8px rgba(0,0,0,0.1);
+}
+.listing-card .card-img-top{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+.show-img{
+    width:auto;
+    max-width:92%;
+    max-height:280px;
+    height:auto;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+    margin:1rem auto;
+}
+.show-details{
+    margin-top:0;
+    padding:0;
+    background:transparent;
+    border-radius:0;
+    box-shadow:none;
+}
+.show-details p{
+    margin-bottom:0.75rem;
+}
+.show-details strong{
+    color:#222222;
+}
+.btns{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+.show-card{
+    padding-left:0;
+    padding-right:0;
+    background:none;
+    box-shadow:none;
+}
+.card-body{
+    padding:0.85rem !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+    display:block !important;
+    width:100% !important;
+}
+
+/* Card effect */
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+/* Map */
+#map{
+    height: 400px;
+    width: 100%;
+}
