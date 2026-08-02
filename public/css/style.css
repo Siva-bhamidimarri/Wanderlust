@@ -9,17 +9,20 @@ body{
 }
 /* NavBar */
 .navbar{
-    height: 5rem;
+    min-height: 4rem;
+    padding: 0.5rem 1rem;
     background-color: white;
 }
 .fa-compass{
     color:blueviolet;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .navbar-nav .nav-link{
     color:#222222 !important;
     opacity: 1 !important;
     font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.95rem;
 }
 /*Footer*/
 .f-info-links a{
@@ -42,7 +45,7 @@ body{
 .f-info{
     text-align: center;
     display:flex;
-    height: 8rem;
+    height: 6rem;
     background-color: #ebebeb;
     flex-wrap:wrap;
     justify-content: space-evenly;
@@ -62,7 +65,7 @@ footer{
 }
 
 /* prevent page content from being hidden behind fixed footer */
-body{ padding-bottom: 8.5rem; }
+body{ padding-bottom: 7rem; }
 
 /* keep header from overlapping content when sticky */
 body > .container{
@@ -71,7 +74,7 @@ body > .container{
 /* cards */
 .listing-card{
     border:none !important;
-    margin-bottom:1.5rem;
+    margin-bottom:1.2rem;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 1px 6px rgba(0,0,0,0.08);
@@ -82,7 +85,8 @@ body > .container{
     box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 .search-results{
-    max-width:440px;
+    width:100%;
+    max-width:520px;
     margin:1.5rem auto;
 }
 .listing-result-item{
@@ -90,29 +94,31 @@ body > .container{
 }
 .search-result-card{
     width:100%;
-    max-width:460px;
     border-radius:14px;
     overflow:hidden;
     box-shadow:0 1px 8px rgba(0,0,0,0.1);
 }
 .listing-card .card-img-top{
     width:100%;
-    height:250px;
+    height:220px;
     object-fit:cover;
 }
 .show-img{
-    width:auto;
-    max-width:92%;
-    max-height:280px;
+    width:100%;
+    max-width:860px;
+    max-height:320px;
     height:auto;
     object-fit:cover;
     border-radius:16px;
     display:block;
     margin:1rem auto;
 }
+.show-page h1{
+    font-size: clamp(1.75rem, 2.2vw, 2.5rem);
+}
 .show-details{
     margin-top:0;
-    padding:0;
+    padding:0.75rem 0;
     background:transparent;
     border-radius:0;
     box-shadow:none;
@@ -127,6 +133,10 @@ body > .container{
     display:flex;
     gap:1rem;
     flex-wrap:wrap;
+}
+.review-card{
+    background:#fff;
+    border:1px solid rgba(0,0,0,0.05);
 }
 .show-card{
     padding-left:0;
@@ -144,6 +154,16 @@ body > .container{
     text-decoration: none;
     display:block !important;
     width:100% !important;
+}
+@media (max-width: 992px) {
+    .listing-card .card-img-top {
+        height:200px;
+    }
+}
+@media (max-width: 768px) {
+    .show-img{
+        max-height:260px;
+    }
 }
 
 /* Card effect */
