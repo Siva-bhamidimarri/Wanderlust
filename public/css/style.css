@@ -130,15 +130,23 @@ body > .container{
     height:220px;
     object-fit:cover;
 }
+.show-img-wrapper{
+    width:100%;
+    max-width:920px;
+    margin:0 auto 1.5rem;
+    padding:0.5rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
 .show-img{
     width:100%;
-    max-width:860px;
-    max-height:320px;
     height:auto;
-    object-fit:cover;
+    max-height:500px;
+    object-fit:contain;
     border-radius:16px;
     display:block;
-    margin:1rem auto;
+    margin:0 auto;
 }
 .show-page h1{
     font-size: clamp(1.75rem, 2.2vw, 2.5rem);

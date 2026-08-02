@@ -18,7 +18,9 @@
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-10 col-md-12">
           <h1 class="mb-3"><%= listing.title %></h1>
-          <img src="<%= (listing.image && listing.image.url) ? listing.image.url : 'https://via.placeholder.com/1200x600?text=No+Image' %>" class="img-fluid show-img mb-4" alt="Listing_image">
+          <div class="show-img-wrapper mb-4">
+            <img src="<%= (listing.image && listing.image.url) ? listing.image.url : 'https://via.placeholder.com/1200x600?text=No+Image' %>" class="img-fluid show-img" alt="Listing_image">
+          </div>
           <div class="show-details mb-4">
             <p class="mb-2"><strong>Owned by</strong> <i><%= listing.owner.username %></i></p>
             <p class="mb-3"><%= listing.description %></p>
